@@ -20,13 +20,14 @@ class JobApplication(models.Model):
     # stage 1 fields
     first_name = models.CharField(max_length=20, blank=True)
     last_name = models.CharField(max_length=20, blank=True)
+    company = models.CharField(max_length=20, blank=True)
     # stage 2 fields
     prior_experience = models.TextField(blank=True)
     # stage 3 fields
     all_is_accurate = models.BooleanField(default=False)
 
     hidden_fields = ['stage']
-    required_fields = ['first_name', 'last_name', 'all_is_accurate']
+    required_fields = ['first_name', 'last_name', 'all_is_accurate', 'company']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -41,7 +42,7 @@ class JobApplication(models.Model):
     def get_fields_by_stage(stage):
         fields = ['stage']  # Must always be present
         if stage == constants.STAGE_1:
-            fields.extend(['first_name', 'last_name'])
+            fields.extend(['first_name', 'last_name', 'company'])
         elif stage == constants.STAGE_2:
             fields.extend(['prior_experience'])
         elif stage == constants.STAGE_3:

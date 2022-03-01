@@ -4,7 +4,7 @@ from .models import JobApplication
 
 class JobApplicationAdmin(admin.ModelAdmin):
     model = JobApplication
-    list_display = ('created', 'first_name', 'last_name', 'stage')
+    list_display = ('created', 'first_name', 'last_name', 'stage', 'company')
     readonly_fields = ('stage',)
     exclude = ('session_hash',)
 
