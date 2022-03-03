@@ -8,7 +8,7 @@
     <p>
       <b>JOB APPLICATION</b>
     </p>
-    <form id="job-application-form" method="post" action=".">
+    <form id="job-application-form" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
       <button type="submit" value="continue">Continue</button>

@@ -2,6 +2,7 @@ import hashlib
 import random
 import sys
 from django.db import models
+from django.contrib.auth.models import User
 from . import constants
 
 
@@ -21,13 +22,26 @@ class JobApplication(models.Model):
     first_name = models.CharField(max_length=20, blank=True)
     last_name = models.CharField(max_length=20, blank=True)
     company = models.CharField(max_length=20, blank=True)
+    vat = models.CharField(max_length=20, blank=True)
+    address_line = models.CharField(max_length=20, blank=True)
+    county = models.CharField(max_length=20, blank=True)
+    country = models.CharField(max_length=20, blank=True)
+
     # stage 2 fields
-    prior_experience = models.TextField(blank=True)
+    company_email = models.CharField(max_length=100,  blank=True
+                                     )
+    phone = models.CharField(max_length=20, blank=True)
+    proof_id = models.FileField(blank=True, upload_to='media')
+    proof_business = models.FileField(blank=True, upload_to='media')
     # stage 3 fields
-    all_is_accurate = models.BooleanField(default=False)
+    password = models.CharField(max_length=40, null=True,
+                                blank=True)
 
     hidden_fields = ['stage']
-    required_fields = ['first_name', 'last_name', 'all_is_accurate', 'company']
+    required_fields = ['first_name', 'last_name',
+                       'company', 'vat', 'address_line', 'county',
+                       'country', 'company_email', 'phone', 'proof_id', 'proof_business',
+                       'password']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -42,9 +56,11 @@ class JobApplication(models.Model):
     def get_fields_by_stage(stage):
         fields = ['stage']  # Must always be present
         if stage == constants.STAGE_1:
-            fields.extend(['first_name', 'last_name', 'company'])
+            fields.extend(['first_name', 'last_name', 'company',
+                          'vat', 'address_line', 'county', 'country'])
         elif stage == constants.STAGE_2:
-            fields.extend(['prior_experience'])
+            fields.extend(['company_email',  'phone',
+                          'proof_id', 'proof_business'])
         elif stage == constants.STAGE_3:
-            fields.extend(['all_is_accurate'])
+            fields.extend(['password'])
         return fields

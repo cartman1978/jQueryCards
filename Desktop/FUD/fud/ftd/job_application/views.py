@@ -4,6 +4,7 @@ from django.forms import modelform_factory
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.views.generic import FormView, TemplateView
+from django.core.files.storage import FileSystemStorage
 from . import constants
 from .forms import BaseApplicationForm
 from .models import JobApplication
@@ -27,6 +28,7 @@ class JobApplicationView(FormView):
     template_name = 'job_application/job_application.html'
     job_application = None
     form_class = None
+    file_storage = FileSystemStorage(location='media')
 
     def dispatch(self, request, *args, **kwargs):
         session_hash = request.session.get("session_hash", None)
