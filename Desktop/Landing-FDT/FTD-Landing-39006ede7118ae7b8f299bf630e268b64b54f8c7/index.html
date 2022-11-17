@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+      <!-- Bootstrap CSS -->
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- multiform -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>First Digital Trade</title>
+</head>
+<body>
+
+    <header id="header">
+        <!--header-start-->
+        <div class="container-fluid">
+          <div class="header_left">
+            <a class="logo" href="{% url 'home' %}"></a>
+          </div>
+          <div class="header_right">
+            <a href="#!" class="nav_ico">Menu</a>
+            <nav class="main_nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Altri Prodotti</a></li>
+                <li><a href="#">Grandi Aziende</a></li>
+                <li><a href="#">Blog</a></li>
+               
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+        <div class="container-fluid flex-container hero">
+          <div><span id="coming">Stiamo Arrivando</span>
+            <h1 class="h-hero">La Neobank per le imprese europee</h1>
+            <p>First Digital Trade  sta per arrivare, con una nuova esperienza digitale che ti 
+            consentirà di ottenere liquidità, gestire i contratti di import export,
+            effettuare transazioni commerciali sicure e tracciare le tue spedizioni marittime nel mondo, 
+            un sistema equo, conveniente e inclusivo.</p>
+            <p>La nostra missione è di supportare la crescita e la prosperità delle aziende Europee con la digitalizzazione.</p>
+            <button type="button" class="btn btn-primary btn-lg m-2" id="btn-main"><a href="#sapere">Mettimi in lista d'attesa</a></button></div>
+          <div> <img src="assets/images/heroftd.png" alt="logo" class="mainHero"></div>
+            
+        </div>
+        <!-- break -->
+        <div class="line mt-5"></div>
+        <!-- Newsletter -->
+        <div class="newsletter-container">
+         <div>
+          <h2 class="text-center iscriviti">Iscriviti alla Newsletter</h2>
+          <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              region: "eu1",
+              portalId: "25343058",
+              formId: "2e31b6af-b688-4456-82bd-10631b1395ab"
+            });
+          </script>
+          
+         </div>
+  </div>
+  <h1 class="text-center iscriviti" id="funzionalita">Le funzionalità che stiamo preparando</h1>
+  <p class="text-center">Pagamenti, contratti , incassi, visibilità delle spedizioni , tutto da un unico accesso .</p>
+
+  <div class="line-2"></div>
+<!-- conti -->
+  
+  <div class="container-fluid flex-container hero">
+    <div> <img src="assets/images/conto.jpg" alt="logo" class="mainHero"></div>
+    <div>
+      <h1 class="conti-head">Conti correnti</h1>
+      <p>I nostri conti correnti  corporate ti permetteranno :</p>
+
+      <dl>
+        <dd>- di creare infiniti IBAN in EUR e GBP per gestire meglio la tesoreria e le riconciliazionik</dd>
+        <dd>- gestire diversi livelli di delega ai tuoi dipendenti e collaboratori e differenti livelli di autorizzazione</dd>
+        <dd>- ricevere ed effettuare pagamenti SWIFT a tassi competitivi e on line. </dd>
+        <dd>- avere le migliori tariffe di exchange per i tuoi pagamenti internazionali in valuta</dd>
+        <dd>- fare e ricevere pagamenti istantanei in Europa e Inghilterra</dd>
+      </dl>  
+  </div>
+  </div>
+  <!-- br -->
+  <div class="br-line">
+    <div></div>
+  </div>
+  <!-- fatture -->
+  <div class="container-fluid flex-container hero">
+    <div>
+      <h1 class="conti-head">Anticipo Fatture</h1>
+      <p>Da First Digital Trade potrai accedere a soluzioni innovative per lo sconto delle tue fatture, 
+        potrei scontare una singola fattura, tutte fatture di un cliente o l' intero fatturato annuale della tua azienda. </p>
+      <p>Offriamo strumenti moderni realizzati che sfruttano la tecnologia per darti più liquidità, senza attese, per darti piu slancio.</p>
+      <p>Le piccole e medie imprese sono penalizzate dal mercato dei capitali, noi sappiamo come cambiare in meglio .</p>
+      </div>
+    <div> <img src="assets/images/fatture.jpg" alt="logo" class="mainHero"></div>
+      
+  </div>
+  <!-- br -->
+  <div class="br-line">
+    <div></div>
+  </div>
+  <!-- Tracciatura -->
+
+  <div class="container-fluid flex-container hero">
+    <div> <img src="assets/images/track.jpg" alt="logo" class="mainHero"></div>
+    <div>
+      <h1 class="conti-head">Tracciatura containers e navi</h1>
+      <p>I tuoi carichi sono preziosi, importatori ed esportatori lo sanno bene, oggi il monitoraggio è fondamentale sia per sapere
+          dove sono le tue merci,
+          che sono legate alle lettere di credito, 
+          agli anticipi export ai pagamenti in entrata.</p> 
+          <p>Abbiamo connesso ai nostri sistemi il piu evoluto sistema di tracciabilità di navi, documenti, lettere di carico elettroniche e containe, Tradelens, inoltre siamo connessi alla rete satellitare per il controllo marittimo,
+            per offrirti il massimo delle informazioni possibili sulle tue merci, e quindi sui tuoi pagamenti e impegni . </p>
+  </div>
+  </div>
+  <!-- br -->
+  <div class="br-line">
+    <div></div>
+  </div>
+  <!-- Cards -->
+
+
+<!-- 
+  <div class="container text-center" id="card">
+    <div class="row">
+      <div class="col">
+        <div class="topic">
+        <h3 class="text-left topics-card">Risparmia</h3>
+        <p class="text-left">
+          con le nostre soluzioni per l'anticipo fatture, non attendi più mesi prima di avere la tua liquidità.
+        </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="topic">
+          <h3 class="text-left topics-card">Più cashflow</h3>
+          <p class="text-left">
+            con le nostre soluzioni per l'anticipo fatture, non attendi più mesi prima di avere la tua liquidità.
+          </p>
+          </div>
+      </div>
+      <div class="col">
+        <div class="topic">
+          <h3 class="text-left topics-card">Vendi in sicurezza</h3>
+          <p class="text-left">
+            i pagamenti anticipati sono sicuri, ma riducono gli affari, prova la nostra soluzione di pagamenti internazionali garantiti.
+          </p>
+          </div>
+      </div>
+      <div class="col">
+        <div class="topic">
+          <h3 class="text-left topics-card">Digitalizza</h3>
+          <p class="text-left">
+            Il mondo del commercio è sempre piu digitale, abbiamo sviluppato una serie di strumenti per commerciare prima e meglio con il mondo.
+          </p>
+          </div>
+      </div>
+    </div>
+   
+  </div> -->
+
+
+
+  <section class="wrapper">
+    <div class="container-fostrap">
+        
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-lg-3">
+                        <div class="card">
+                          <img src="assets/images/piggy.png" class="piggy-img" alt="piggy">
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    Risparmia
+                                 
+                                </h4>
+                                <p class="">
+                                  con i nostri conti correnti puoi risparmiare fino al 70% delle spese bancarie che paghi oggi. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-lg-3">
+                        <div class="card">
+                          <img src="assets/images/coins.png" class="piggy-img" alt="piggy">
+                          <div class="card-content">
+                            <h4 class="card-title">
+                              Più cashflow
+                             
+                            </h4>
+                            <p class="">
+                              con le nostre soluzioni per l'anticipo fatture, non attendi più mesi prima di avere la tua liquidità. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-lg-3">
+                        <div class="card">
+                          <div class="card-content">
+                            <h4 class="card-title">
+                              Vendi in sicurezza
+                             
+                            </h4>
+                            <p class="">
+                              Il mondo del commercio è sempre piu digitale, abbiamo sviluppato una serie di strumenti per commerciare prima e meglio con il mondo. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-lg-3">
+                      <div class="card">
+                        <div class="card-content">
+                          <h4 class="card-title">
+                              Risparmia
+                           
+                          </h4>
+                          <p class="">
+                            con i nostri conti correnti puoi risparmiare fino al 70% delle spese bancarie che paghi oggi . 
+                          </p>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+ 
+ 
+
+ 
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $('.nav_ico').click(function () {
+            $('.main_nav').toggleClass('active');
+          });
+          $('.main_nav').click(function () {
+            $(this).removeClass('active');
+          });
+          $('.main_nav ul').click(function (event) {
+            event.stopImmediatePropagation();
+          });
+        });
+      </script>
+
+      
+    
+</body>
+</html>
